@@ -3,7 +3,7 @@
   DOCTest unit tests
  */
 
-#include "../../doctest/doctest.h"
+#include "../doctest/doctest.h"
 #include "prefix_sum.h"
 
 int nums_0[] = {}; 
