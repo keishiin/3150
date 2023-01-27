@@ -14,7 +14,7 @@ int prefix_sum(int array[], int length) {
 
 }
 
-bool non_negative_prefix_sum(int array[], int length) {
+bool non_negative_sum(int array[], int length) {
     // base case
     // if array is empty return true 
     if (length == 0) {
@@ -33,7 +33,7 @@ bool non_negative_prefix_sum(int array[], int length) {
 }
 
 // 
-bool non_positive_prefix_sum(int array[], int length){
+bool non_positive_sum(int array[], int length){
     // base case
     // if array is empty return true 
     if (length == 0) {

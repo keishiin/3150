@@ -25,19 +25,19 @@ TEST_CASE("Test week 2 functions") {
     CHECK(prefix_sum(nums_5, sizeof(nums_5)/sizeof(nums_5[0])) == -2);
   };
   SUBCASE("non-negative prefix sums") {
-    CHECK(non_negative_prefix_sum(nums_0, sizeof(nums_0)/sizeof(nums_0[0])) == true);
-    CHECK(non_negative_prefix_sum(nums_1, sizeof(nums_1)/sizeof(nums_1[0])) == true);
-    CHECK(non_negative_prefix_sum(nums_2, sizeof(nums_2)/sizeof(nums_2[0])) == true);
-    CHECK(non_negative_prefix_sum(nums_3, sizeof(nums_3)/sizeof(nums_3[0])) == false);
-    CHECK(non_negative_prefix_sum(nums_4, sizeof(nums_4)/sizeof(nums_4[0])) == true);
-    CHECK(non_negative_prefix_sum(nums_5, sizeof(nums_5)/sizeof(nums_5[0])) == false);
+    CHECK(non_negative_sum(nums_0, sizeof(nums_0)/sizeof(nums_0[0])) == true);
+    CHECK(non_negative_sum(nums_1, sizeof(nums_1)/sizeof(nums_1[0])) == true);
+    CHECK(non_negative_sum(nums_2, sizeof(nums_2)/sizeof(nums_2[0])) == true);
+    CHECK(non_negative_sum(nums_3, sizeof(nums_3)/sizeof(nums_3[0])) == false);
+    CHECK(non_negative_sum(nums_4, sizeof(nums_4)/sizeof(nums_4[0])) == true);
+    CHECK(non_negative_sum(nums_5, sizeof(nums_5)/sizeof(nums_5[0])) == false);
   };
   SUBCASE("non-positive prefix sums") {
-    CHECK(non_positive_prefix_sum(nums_0, sizeof(nums_1)/sizeof(nums_1[0])) == true);
-    CHECK(non_positive_prefix_sum(nums_1, sizeof(nums_1)/sizeof(nums_1[0])) == true);
-    CHECK(non_positive_prefix_sum(nums_2, sizeof(nums_2)/sizeof(nums_2[0])) == true);
-    CHECK(non_positive_prefix_sum(nums_3, sizeof(nums_3)/sizeof(nums_3[0])) == false);
-    CHECK(non_positive_prefix_sum(nums_4, sizeof(nums_4)/sizeof(nums_4[0])) == false);
-    CHECK(non_positive_prefix_sum(nums_5, sizeof(nums_5)/sizeof(nums_5[0])) == true);
+    CHECK(non_positive_sum(nums_0, sizeof(nums_1)/sizeof(nums_1[0])) == true);
+    CHECK(non_positive_sum(nums_1, sizeof(nums_1)/sizeof(nums_1[0])) == true);
+    CHECK(non_positive_sum(nums_2, sizeof(nums_2)/sizeof(nums_2[0])) == true);
+    CHECK(non_positive_sum(nums_3, sizeof(nums_3)/sizeof(nums_3[0])) == false);
+    CHECK(non_positive_sum(nums_4, sizeof(nums_4)/sizeof(nums_4[0])) == false);
+    CHECK(non_positive_sum(nums_5, sizeof(nums_5)/sizeof(nums_5[0])) == true);
   };
 }
