@@ -1,6 +1,5 @@
 CC = g++
 CFLAGS = -std=c++11 -g -Wall
-PREFIXSUM = ../week02/prefix_sum.o
 INCLUDEWEEK2 = -I../week2
 
 all: lab2 testlab2

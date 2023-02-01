@@ -16,7 +16,7 @@ int main () {
     // call the do all work funtion and store its success rate 
     int well_balanced_lists = do_all_work(n, r);
     cout << "number of well balanced lists: "<< well_balanced_lists << endl;
-    cout << "Percentage is: " << (well_balanced_lists / float(r)) * 100 << "%"<< endl;
+    cout << "Percentage is: " << (well_balanced_lists / float(r)) * 100 << "%" << endl;
 
     return 0; 
 }
