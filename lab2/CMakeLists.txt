@@ -1,0 +1,2 @@
+add_executable(lab2 generate_list.cpp fisher_yates.cpp do_all_work.cpp ../week02/prefix_sum.cpp main.cpp)
+add_executable(testlab2 generate_list.cpp fisher_yates.cpp do_all_work.cpp ../week02/prefix_sum.cpp tests.cpp)

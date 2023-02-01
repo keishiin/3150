@@ -1,0 +1,1 @@
+add_executable(unit_tests_prefix_sums unit_tests_prefix_sums.cpp prefix_sum.cpp)

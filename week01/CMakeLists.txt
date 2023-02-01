@@ -1,0 +1,1 @@
+add_executable(testNumbers TestNumbers.cpp ECCalculator.cpp ECNumbers.cpp)
