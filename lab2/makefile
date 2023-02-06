@@ -1,6 +1,6 @@
 CC = g++
 CFLAGS = -std=c++11 -g -Wall
-INCLUDEWEEK2 = -I../week2
+week2 = -I../week2
 
 all: lab2 testlab2
 
@@ -23,7 +23,7 @@ do_all_work.o: do_all_work.h do_all_work.cpp
 	$(CC) $(CFLAGS) -c do_all_work.cpp
 
 tests.o: fisher_yates.h generate_list.h do_all_work.h tests.cpp
-	$(CC) $(CFLAGS) $(INCLUDEWEEK2) -c tests.cpp
+	$(CC) $(CFLAGS) $(week2) -c tests.cpp
 
 main.o: fisher_yates.h generate_list.h do_all_work.h main.cpp
-	$(CC) $(CFLAGS) $(INCLUDEWEEK2) -c main.cpp
+	$(CC) $(CFLAGS) $(week2) -c main.cpp
