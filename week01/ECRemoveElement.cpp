@@ -4,7 +4,8 @@
 void ECRemoveSpace(int nums[], int len, int val)
 {
   // your code here
-  int i, backwards = len - 1;
+  int i = 0;
+  int backwards = len - 1;
 
   while (i < backwards)
   {
