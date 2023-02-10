@@ -1,13 +1,20 @@
 #include <iostream>
 #include "lab3.h"
 
+using namespace std; 
 
-int main() {
+int main () {
+    // request 2 numbers one n and one r 
+    int n, r; 
 
-    int arr[]= {1, 2, 3};
+    cout << "Enter a number n: " << endl;
+    cin >> n;
+    cout << "Enter a number r: " << endl;
+    cin >> r; 
 
-    make_list(arr);
-    lowest_depth(arr);
+    int wbList = do_all_work(n, r);
+    cout << "wb_list: " << wbList << endl;
+    cout << "wb_list percent: " << float(wbList)/100000 << endl;
 
     return 0;
 }
