@@ -30,8 +30,8 @@ int popStack(std::stack<int>& s){
 
     // check is stack is empty or not 
     if (!s.empty()) {
-        int temp = s.top();
-        s.pop();
+        int temp = s.top(); // peek the top
+        s.pop(); // pop the top
         return temp;
     }
 
@@ -39,7 +39,8 @@ int popStack(std::stack<int>& s){
 }
 
 void pushQ(std::queue<int>& q, std::string& fs){
-        // open the file
+
+    // open the file
     std::ifstream myfile(fs, std::ios_base::in); 
 
     // check if file is open 
@@ -56,10 +57,11 @@ void pushQ(std::queue<int>& q, std::string& fs){
 }
 
 int popQ(std::queue<int>& q){
-        // check is stack is empty or not 
+    
+     // check is stack is empty or not 
     if (!q.empty()) {
-        int temp = q.front();
-        q.pop();
+        int temp = q.front(); // peek the top
+        q.pop(); // pop the top
         return temp;
     }
 
