@@ -37,6 +37,11 @@ TEST_CASE("Testing build linked list") {
       CHECK(tmp->number == i -1);
       tmp = tmp-> next;
     }
+
+    // check pointer jump functionc
+    CHECK(pointer_jump_linked_list(tmp, 10)->number == 9);
+    CHECK(tmp->jump->number == 9);
+
     CHECK(delete_linked_list(linked_list_2, 10) == 9);
   }
 
