@@ -16,9 +16,6 @@ struct int_vector {
 
     int_vector() : id(-1), from(0), to(0) {}; // basic constructor
 
-    // int_vector (int id, int f, int t) {
-    //     id = id
-    // }
 };
 
 
