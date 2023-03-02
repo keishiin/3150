@@ -19,19 +19,19 @@ struct double_vector {
 
 };
 
-
-struct cos_distance_vector {
-    double c_distance;
-    double_vector i_v;
-    double_vector i_v2;
-}
+struct idek {
+    double_vector iv;
+    double_vector iv2;
+    double dist;
+};
 
 void read_vectors_pairs(std::vector<double_vector> &vec, std::string &fs);
-void print_vectors(std::vector<double_vector> &vec);
+void print_vectors(std::vector<idek> &vec);
 double vec_magnitude(double_vector &vec);
 double dot_product(double_vector &vec, double_vector &vec2);
 double other_prod(double_vector &vec, double_vector &vec2);
 double cos_distance(double_vector &vec, double_vector&vec2);
+void unordered_vec_pairs (std::vector<double_vector> &vec, std::vector<idek> &new_vec);
 
 
 #endif

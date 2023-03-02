@@ -29,16 +29,50 @@ void read_vectors_pairs(std::vector<double_vector> &vec, std::string &fs){
 
 }
 
-void print_vectors(std::vector<double_vector> &vec){
+void unordered_vec_pairs (std::vector<double_vector> &vec, std::vector<idek> &new_vec){
 
-    sort(vec.begin(), 
-    vec.end(), 
-    [](const double_vector &left, const double_vector &right) {
-        return left.id > right.id;
+    // make the pairs
+    for (int i = 0; i < vec.size()-1; i++) {
+        for (int j = i+1; j < vec.size(); j++) {
+
+            idek idk;
+
+            idk.iv = vec[i];
+            idk.iv2 = vec[j];
+            idk.dist = cos_distance(vec[i], vec[j]);
+
+            new_vec.push_back(idk);
+        }
+    }
+}
+
+
+void print_vectors(std::vector<idek> &new_vec){
+
+    // std::vector<idek> new_vec;
+
+    // // make the pairs
+    // for (int i = 0; i < vec.size()-1; i++) {
+    //     for (int j = i+1; j < vec.size(); j++) {
+
+    //         idek idk;
+
+    //         idk.iv = vec[i];
+    //         idk.iv2 = vec[j];
+    //         idk.dist = cos_distance(vec[i], vec[j]);
+
+    //         new_vec.push_back(idk);
+    //     }
+    // }
+
+    sort(new_vec.begin(), 
+    new_vec.end(), 
+    [](const idek &left, const idek &right) {
+        return left.dist < right.dist;
     });
 
-    for (auto v : vec) {
-        cout << v.id << ": "<< v.from << " " << v.to << endl;
+    for (auto v : new_vec) {
+        cout << "cos_dist: "<< v.dist << ": " << "(" << v.iv.id << ", " << v.iv.from << ", " << v.iv.to << ")" << " " << "(" << v.iv2.id << ", " << v.iv2.from << ", " << v.iv2.to << ")" << endl;
     }
 }
 

@@ -3,14 +3,18 @@
 int main() {
 
     std::vector<double_vector> vec;
-    std::string file = "vec_list.txt";
+    std::string file;
 
-    // cout << "Enter file name: " << endl; 
-    // cin >> file;
+    cout << "Enter file name: " << endl; 
+    cin >> file;
 
     read_vectors_pairs(vec, file);
 
-    print_vectors(vec);
+    std::vector<idek> n_vec;
+
+    unordered_vec_pairs(vec, n_vec);
+
+    print_vectors(n_vec);
 
     return 0;
 }

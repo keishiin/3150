@@ -97,4 +97,39 @@ TEST_CASE("lab 5 tests") {
 
     }
 
+    SUBCASE("unordered_vec_pairs") {
+
+        std::vector<double_vector> vec;
+        std::string file = "vec_list.txt";
+        read_vectors_pairs(vec, file);
+        std::vector<idek> n_vec;
+        unordered_vec_pairs(vec, n_vec);
+
+        CHECK(n_vec[0].dist == doctest::Approx(1.50164));
+        CHECK(n_vec[0].iv.id == 0);
+        CHECK(n_vec[0].iv.from == 0.1);
+        CHECK(n_vec[0].iv.to == 0.2);
+        CHECK(n_vec[0].iv2.id == 1);
+        CHECK(n_vec[0].iv2.from == -0.3);
+        CHECK(n_vec[0].iv2.to == 0.4);
+
+        CHECK(n_vec[1].dist == doctest::Approx(1.40076));
+        CHECK(n_vec[1].iv.id == 0);
+        CHECK(n_vec[1].iv.from == 0.1);
+        CHECK(n_vec[1].iv.to == 0.2);
+        CHECK(n_vec[1].iv2.id == 2);
+        CHECK(n_vec[1].iv2.from == 0.5);
+        CHECK(n_vec[1].iv2.to == 0.6);
+
+
+        CHECK(n_vec[2].dist == doctest::Approx(1.39107));
+        CHECK(n_vec[2].iv.id == 0);
+        CHECK(n_vec[2].iv.from == 0.1);
+        CHECK(n_vec[2].iv.to == 0.2);
+        CHECK(n_vec[2].iv2.id == 3);
+        CHECK(n_vec[2].iv2.from == 0.7);
+        CHECK(n_vec[2].iv2.to == 0.8);
+
+    }
+
 }
