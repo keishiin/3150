@@ -8,11 +8,11 @@ int main() {
         list.push(i);
     };
 
-    // cout << "The list with 10 nodes: " << list << endl;
+    cout << "after 10 inserts : " << list << endl;
 
     list.clean();
 
-    // cout << "The list after clean(): " << list << endl;
+    cout << "after clean up : " << list << endl;
 
     return 0;
 }

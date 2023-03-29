@@ -7,12 +7,12 @@
 
 using namespace std;
 
-struct List {
+ struct Node {
+    int data;
+    unique_ptr<Node> next;
+};
 
-    struct Node {
-        int data;
-        unique_ptr<Node> next;
-    };
+struct List {
 
     unique_ptr<Node> head;
 
@@ -20,8 +20,9 @@ struct List {
 
     void push(int data) {
 
-        auto temp{std::make_unique<Node>(data)};
-
+        auto temp = std::make_unique<Node>();
+        temp->data = data;
+        
         if (head) {
 
             temp->next = std::move(head);
@@ -30,16 +31,6 @@ struct List {
         else {
             head = std::move(temp);
         }
-    };
-
-    void pop() {
-
-        if(head == nullptr) {
-            return;
-        }
-        
-        std::unique_ptr<Node> temp = std::move(head);
-        head = std::move(temp->next);
     };
     
     void clean() {
@@ -52,10 +43,8 @@ struct List {
         clean();
     };
 
-    // friend std::ostream& operator<<(std::ostream &os, const List &list);
+    friend std::ostream& operator<<(std::ostream &os, const List &list);
     
 };
-
-
 
 #endif
