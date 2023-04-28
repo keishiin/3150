@@ -2,7 +2,7 @@
 ```
 make clean
 make all
-./week11
+./lab9
 ```
 
 
@@ -10,5 +10,5 @@ make all
 ```
 make clean
 make all
-./week11test
+./lab9test
 ```
