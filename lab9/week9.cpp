@@ -1,4 +1,4 @@
-#include "lab9.h"
+#include "week9.h"
 
 
 Matrix createMatarix(int n, int m){

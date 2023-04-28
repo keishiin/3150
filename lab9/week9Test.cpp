@@ -1,7 +1,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 
 #include "../doctest/doctest.h"
-#include "lab9.h"
+#include "week9.h"
 
 TEST_CASE("TEST") {
 
